@@ -1,0 +1,38 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}
+    {% if category %}{{ category.title }}{% else %}Products{% endif %}
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="product-detail pd d-flex ">
+        <div class="datail d-flex justify-content-between">
+            <div id="big" class="сol-xl-10 col-10 col-md-10 col-10 col-sm-10 col-10 col-lg-10 col-8">
+                <img class="mainImg" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+            </div>
+     
+            <div class="leftDetail  сol-xl-2 col-md-2 col-sm-2 col-lg-2 col-4 d-flex flex-column" id="small">
+                <a href="{% if product.image2 %}{{ product.image2.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"><img src="{% if product.image2 %}{{ product.image2.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"></a>
+                <a href="{% if product.image3 %}{{ product.image3.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"><img src="{% if product.image3 %}{{ product.image3.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"></a>
+                <a href="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"><img class="mainImg" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}"></a>
+            </div>
+      
+        </div>
+      
+        <div class="discription pd">
+
+        <h1 class="product">{{ product.name }}</h1>
+        <p class="price">${{ product.price }}</p>
+        <h2><a class="category" href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+     
+<form action="{% url "cart:cart_add" product.id %}" method="post">
+   <div class="cart-proudct">{{ cart_product_form }}</div>
+    {% csrf_token %}
+    <input class="btn-add" type="submit" value="Add to cart">
+</form>
+        <div class="description__subtitle" >{{ product.description }}</div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

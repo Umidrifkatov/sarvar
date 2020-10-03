@@ -1,0 +1,865 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:hover {
+  text-decoration: none !important;
+}
+
+ul{
+  list-style: none !important;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+@font-face {
+  font-family: 'Bebas Neue Pro';
+  src: url(../fonts/BebasNeuePro-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Bebas Neue Pro Bold';
+  src: url(../fonts/BebasNeuePro-ExpandedExtraBold.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.pd {
+  padding: 100px 0;
+}
+
+body {
+  background: #f0f0f0;
+  font-family: 'Bebas Neue Pro', cursive;
+  font-weight: 400;
+  border: 30px solid #fff;
+  height: 100%;
+}
+
+.cart__container {
+  position: relative;
+}
+
+.cart__container .cart {
+  width: 200px;
+  position: absolute;
+  right: 0;
+  color: #af8e68 !important;
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+}
+
+.nav {
+  color: #af8e68 !important;
+  display: flex;
+  width: 980px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.nav__logo {
+  font-size: 40px;
+  color: #af8e68 !important;
+  font-family: 'Bebas Neue Pro Bold';
+}
+
+.nav__menu {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.nav__links {
+  color: #af8e68 !important;
+  font-size: 20px;
+}
+
+.slider {
+
+  margin: auto;
+  position: relative;
+  height: 600px;
+}
+
+.slider__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider__inner img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 1s;
+}
+
+.slider__inner img:first-child {
+  opacity: 1;
+}
+
+.slider__btns {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider__btns .btn-right {
+  position: absolute;
+  right: 0;
+}
+
+.slider__btns .btn {
+  background: #958f8d;
+  border: none;
+  height: 200px;
+  width: 50px;
+  opacity: 50%;
+  font-size: 40px;
+}
+
+.slider__btns .btn i {
+  color: #c8c4c3 !important;
+}
+
+.slider__btns .btn:hover {
+  opacity: 1;
+}
+
+.indicators {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2%;
+}
+
+
+.indicators li {
+  width: 20px;
+  height: 20px;
+  border-radius: 48% 52% 50% 50% / 45% 46% 54% 55%;
+  border: 2px solid #af8e68;
+  margin-left: 5px;
+  color: #fff !important;
+  text-align: center;
+  font-size: 10px;
+  cursor: pointer;
+  padding-top: 3px;
+}
+
+.indicators li.active {
+  background: #af8e68;
+}
+
+.products {
+  font-family: 'Bebas Neue Pro Bold';
+  position: relative;
+}
+
+.products__title {
+  position: absolute;
+  color: #af8e68 !important;
+  font-size: 120px;
+  right: 1%;
+  top: -35px;
+}
+
+.products .tile {
+  width: 100%;
+  padding-left: 3px;
+  height: 287.5px;
+}
+
+.products .plates {
+  padding: 0;
+  width: 100%;
+}
+
+.products .knives {
+  font-size: 80px;
+  left: 17%;
+  top: -25px;
+}
+
+.products .teapot {
+  font-size: 80px;
+  left: 15%;
+  top: 50%;
+}
+
+.products .plates__title {
+  right: -34%;
+  top: 12%;
+  font-size: 80px;
+  transform: rotate(270deg);
+}
+
+.products .knives-2 {
+  font-size: 80px;
+  left: 28%;
+  top: 50%;
+}
+
+.products .more {
+  background: #af8e68;
+  margin: auto;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+.products .more a {
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+  color: #fff !important;
+}
+
+.about__container {
+  background: url("../img/slider1.jpg");
+  background-size: cover;
+  padding: 50px 0 200px 50px !important;
+}
+
+.about__container .about__title {
+  position: absolute;
+  bottom: -250px;
+  right: -50px;
+  font-size: 120px;
+  color: #af8e68 !important;
+  font-family: 'Bebas Neue Pro Bold';
+}
+
+.about__container .about__subtitle {
+  font-size: 40px;
+  font-family: 'Bebas Neue Pro Bold';
+  color: #fff !important;
+  width: 50%;
+}
+
+.process__container {
+  position: relative;
+}
+
+.process__container .process__title {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  font-size: 120px;
+  color: #af8e68 !important;
+  font-family: 'Bebas Neue Pro Bold';
+  z-index: 23;
+}
+
+.process__container img {
+  width: 100%;
+}
+
+.process__container .col-xl-6 {
+  padding: 0;
+}
+
+.footer {
+  color: #fff !important;
+}
+
+.footer__container {
+  background: #383733;
+}
+
+.footer__title {
+  text-transform: uppercase;
+  padding: 0 100px 25px 100px;
+}
+
+.footer__subtitle {
+  text-transform: capitalize;
+  font-size: 20px;
+  padding: 0 100px;
+}
+
+.footer__subtitle a {
+  color: #fff !important;
+}
+
+.footer .mail {
+  text-transform: none;
+  padding: 0;
+  padding-left: 100px;
+}
+
+.footer__follow {
+  text-transform: uppercase;
+  padding: 0 100px;
+  margin-top: 50px;
+}
+
+.footer__social {
+  display: inline-block;
+  margin-top: 20px;
+  padding-left: 100px;
+  color: #fff !important;
+}
+
+.filter__product {
+  margin: auto;
+}
+
+.filter__label {
+  background: #383733;
+  padding: 15px;
+  color: #B9B9B9 !important;
+}
+
+.filter__group {
+  background: #fff;
+  padding: 15px;
+  color: #B9B9B9 !important;
+  cursor: pointer;
+  position: relative;
+}
+
+.filter .filter__option {
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  text-align: left;
+  display: none;
+  z-index: 24;
+}
+
+.filter .filter__option.show {
+  display: flex;
+}
+
+.filter .filter__option .option {
+  background: #fff;
+  width: 110px;
+  padding: 15px;
+  color: #B9B9B9 !important;
+  cursor: pointer;
+  position: relative;
+  list-style: none;
+}
+
+.filter .filter__option .option:hover {
+  background: #af8e68;
+  color: #fff !important;
+}
+
+.btnToTop {
+  width: 50px;
+  height: 50px;
+  background: #af8e68;
+  border: none;
+  outline: none;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  display: none;
+  transition: 1s;
+  border-radius: 2px;
+  color: #fff !important;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  padding: 5px;
+ 
+}
+
+.card {
+  margin-bottom: 30px;
+ 
+}
+
+.card img {
+
+  width: 100%;
+}
+
+.test {
+  text-align: center;
+
+}
+
+.btns {
+  width: 500px;
+  height: 50px;
+  background: #383733;
+  color: #fff !important;
+  font-size: 25px;
+  line-height: 50px;
+  text-align: center;
+  display: block;
+  margin: 5px auto;
+  text-transform: capitalize;
+}
+
+.unload {
+  display: none;
+}
+
+.mainPlates {
+  height: 578px;
+}
+
+.products__title_2th {
+  position: absolute;
+  color: #af8e68 !important;
+  font-size: 120px;
+  left: 8%;
+  bottom: 5px;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.popup {
+  position: fixed;
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  left: 50%;
+  top: -200%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  background-color: #fcfcfc !important;
+  transition: 0.6s;
+}
+
+.popup__title {
+  color: #9d9d9d !important;
+  width: 100px;
+  font-weight: lighter;
+  margin-bottom: 15px;
+}
+
+.popup__subtitle {
+  color: #757575 !important;
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.popup__buyNow {
+  padding: 10px;
+  display: inline-block;
+  background: #5bb4b2;
+  border-radius: 5px;
+  color: #fff !important;
+}
+
+.parametrs__title {
+  font-size: 15px;
+  color: #bebebe !important;
+  text-transform: uppercase;
+  font-weight: lighter;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.table {
+  display: flex;
+}
+
+.table_parametrs {
+  padding: 10px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+}
+
+.popup-active {
+  top: 50%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 2rem;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.mainImg{
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 0 !important;
+}
+
+.leftDetail img{
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding: 0 !important;
+}
+
+
+
+.product-detail{
+  display: flex;
+  flex-direction: column;
+}
+
+.category{
+  font-size: 24px;
+  color: #af8e68 !important;
+}
+
+.product{
+  color: #af8e68 !important;
+}
+
+.btn-add{
+  background: #af8e68;
+  color: #fff;
+  border: none;
+  padding: 10px;
+
+  font-size: 19px;
+}
+
+.description__subtitle{
+  font-size: 21px;
+  padding-top: 20px;
+}
+
+.price{
+  font-weight: bold;
+  font-size: 25px;
+}
+.cart-proudct{
+  font-size: 21px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 25px;
+
+}
+
+.prodContent__title a,
+.prodContent__price{
+  color: black !important;
+
+  font-family: 'Bebas Neue Pro Bold';
+}
+
+.cart-page{
+  width: 100%;
+}
+
+.cart-btns{
+  margin-top: 50px;
+ 
+}
+
+.cart-btns a{
+  color: #fff !important;
+}
+
+.cart-page img{
+  margin: 15px 0;
+}
+
+.total{
+  border-top:1px solid #111;
+  font-size: 25px;
+}
+
+.order-info{
+  margin-right: 150px;
+}
+
+
+
+.mainlist{
+  padding-bottom: 100px;
+}
+
+.option a{
+  width: 100%;
+  height: 100%;
+}
+
+.mobile{
+  display: none;
+}
+
+.discription{
+  padding-left: 15px;
+}
+
+
+.form-group input{
+  width: 650px;
+  height: 50px;
+}
+
+.form-group input::placeholder{
+  padding: 15px;
+}
+
+.create{
+  padding: 100px 20px;
+}
+
+@media (max-width: 1199.98px) {
+  .form-group input{
+    width: 450px;
+    height: 50px;
+  }
+  .order-info{
+    margin-right: 100px;
+  }
+  
+  .products .tile {
+    height: 50%;
+    padding-top: 10px;
+  }
+  
+  .products .plates__title{
+    right: -10%;
+  }
+  
+  .nav{
+    width: 850px;
+    display: flex;
+    align-items: center;
+
+  }
+  .about__container .about__title{
+    right: 50px;
+  }
+  .process__container .process__title{
+    right: -10px;
+  }
+  .footer__follow,
+  .footer__social,
+  .footer .mail,
+  .footer__title,
+  .footer__subtitle{
+    padding-left: 40px;
+    padding-right: 0;
+  }
+
+}
+
+@media (max-width: 991.98px) {
+
+  .product{
+    padding-top: 50px;
+  }
+  .nav__menu{
+    width: 400px;
+  }
+  .nav__links{
+    font-size: 30px !important;
+    display: inline-flex;
+    align-items: center;
+  }
+  .nav{
+    width: 600px;
+    text-align: center;
+  }
+  .nav__logo{
+    display: block;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .form-group input{
+    width: 350px;
+    height: 50px;
+  }
+  .order-info{
+    margin-right: 50px;
+  }
+  .leftDetail{
+    align-items: flex-end;
+  }
+  
+  .leftDetail{
+    width: 100%;
+  }
+  
+  .nav__menu{
+    width: 350px;
+  }
+  .about__container .about__subtitle{
+    font-size: 25px;
+  }
+  .footer__follow,
+  .footer__social,
+  .footer .mail,
+  .footer__title, 
+  .footer__subtitle{
+    padding-left: 21px;
+  }
+  .footer__subtitle{
+    font-size: 15px;
+  }
+  .nav__links{
+    font-size: 30px !important;
+  }
+  .nav__logo{
+    font-size: 35px;
+  }
+  .nav{
+    max-width: 550px;
+    text-align: center;
+   
+  }
+  
+  .nav__logo{
+    display: block;
+  }
+  
+  .tile,
+  .products__title{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+  .indicators li{
+    width: 25px;
+  height: 25px;
+  font-size: 12px;
+
+}
+}
+
+@media (max-width: 592.98px) {
+  .create{
+    padding: 25px;
+  }
+  .form-group input{
+    width: 350px;
+    height: 50px;
+  }
+  .order-info{
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .form-group input{
+    width: 250px;
+    height: 50px;
+  }
+  .order-info{
+    margin-right: 25px;
+  }
+  
+  .create{
+    width: 300px;
+    margin: auto;
+  }
+  
+  .mainImg{
+    width: 100%; 
+  }
+  
+  
+  .nav{
+    width: 300px;
+    padding: 50px 0 50px;
+  }
+  
+  .slider__btns .btn{
+    height: 70px;
+    font-size: 18px;
+ 
+  }
+  .cart-page th{
+    font-size: 15px;
+    text-align: center;
+  }
+  .cart-page img{
+    width: 50px;
+  }
+  .cart-page td{
+    text-align: center;
+    padding: 0 5px;
+  }
+
+  .slider{
+    height: 250px;
+  }
+
+  .about__container .about__subtitle{
+    font-size: 17px;
+  }
+  
+  .process__container .process__title{
+    right: 50px;
+  }
+  .products__title{
+    right: 15px;
+
+  }
+  .about__container{
+    padding: 50px 0 200px 50px !important;
+  }
+  
+  .nav__logo{
+    font-size: 50px;
+    text-align: center;
+  }
+  .products__title,
+  .about__title,
+  .process__title{
+    font-size: 55px !important;
+  }
+  .nav__links{
+    font-size: 25px !important;
+  }
+  body{
+    border: none;
+  }
+  
+}

@@ -1,0 +1,79 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container mainlist">
+    <div class="filter">
+        <div class="container filter__container">
+            <div class="row">
+                <div class="filter__product">
+                    <span class="filter__label">LOOKING FOR:</span>
+                    <span class="filter__group">
+                        ALL THE GOODS...
+                        <div class="filter__option">
+                            <a href="{% url "shop:product_list" %}"> <span data-products="card">  <li class="option" {% if not category %}class="selected"{% endif %}>
+                               All
+                            </li></span></a>
+                            {% for c in categories %} <a href="{{ c.get_absolute_url }}">  <span data-products="platesShow" >
+                                <li class="option" {% if category.slug == c.slug %}class="selected"{% endif %}>
+                                   {{ c.name }}</span>
+                                </li></a> 
+                            {% endfor %}</a>
+                       
+                        </div>
+                    </span>
+               
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="sidebar">
+    
+
+    <ul>
+      
+        
+     
+       
+    </ul>
+</div>
+<div id="main" class="product-list">
+    <h1>{% if category %}{{ category.name }}{% else %}Products{% endif %}</h1>
+
+    <div class="all">
+        <div class="row">
+       {% for product in products %}
+       <div class="col-xl-3 col-md-6 col-lg-6 test card knivesShow">
+        <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" alt="" width="100%" >
+        <div class="text">
+        <div class="prodContent__title"><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></div>
+        <div class="prodContent__price">${{ product.price }}</div>
+    </div>
+    </div>
+    
+        <!-- <div class="item">
+            <a href="{{ product.get_absolute_url }}">
+                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+            </a>
+            <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
+            ${{ product.price }}
+        </div> -->
+  
+    {% endfor %}
+    <!-- <div class="col-xl-3 test card knivesShow">
+        <img src="img/knives-1.png" alt="" width="100%">
+        <div class="text">
+        <div class="prodContent__title">Machinist leather apron</div>
+        <div class="prodContent__price">$280.00</div>
+    </div> -->
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<script src="{% static "js/products.js" %}"></script>
+{% endblock %}
