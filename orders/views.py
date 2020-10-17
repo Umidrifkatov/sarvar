@@ -17,7 +17,7 @@ def order_create(request):
                                          price=item['price'],
                                          quantity=item['quantity'])
             # очистка корзины
-            cart.clear()
+            # cart.clear()
             return render(request, 'order/created.html',
                           {'order': order})
     else:
